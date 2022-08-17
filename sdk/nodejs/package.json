@@ -1,5 +1,5 @@
 {
-    "name": "@pulumi/metabase",
+    "name": "@pulumi/metabase2",
     "version": "${VERSION}",
     "scripts": {
         "build": "tsc",
