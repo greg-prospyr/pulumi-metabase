@@ -140,7 +140,7 @@ func (m *MetabaseResourceConstructor) NewMySQLCluster(dbSubnetIDs pulumi.StringA
 		MasterPassword:          metabasePassword.Result,
 		Engine:                  pulumi.String("aurora-mysql"),
 		EngineMode:              pulumi.String("serverless"),
-		EngineVersion:           pulumi.String("5.7.mysql_aurora.2.07.1"),
+		EngineVersion:           pulumi.String("5.7.serverless_mysql_aurora.2.08.3"),
 		VpcSecurityGroupIds:     pulumi.ToStringArrayOutput([]pulumi.StringOutput{metabaseSecurityGroupID.ToStringOutput()}),
 		FinalSnapshotIdentifier: pulumi.Sprintf("%smetabasefinalsnapshot", m.name),
 		EnableHttpEndpoint:      pulumi.BoolPtr(true),
