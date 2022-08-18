@@ -14,7 +14,7 @@
     },
     "files": [
         "index.ts",
-        "metabase.ts",
+        "metabase2.ts",
         "provider.ts",
         "types/index.ts",
         "types/input.ts",

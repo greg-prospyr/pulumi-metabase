@@ -3,7 +3,7 @@
     "version": "${VERSION}",
     "scripts": {
         "build": "tsc",
-        "install": "node scripts/install-pulumi-plugin.js resource metabase ${VERSION}"
+        "install": "node scripts/install-pulumi-plugin.js resource metabase2 ${VERSION}"
     },
     "dependencies": {
         "@pulumi/aws": "^5.0.0",

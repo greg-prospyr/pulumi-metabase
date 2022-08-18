@@ -1,8 +1,8 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/pulumi/pulumi/master/pkg/codegen/schema/pulumi.json
 ---
-name: metabase
+name: metabase2
 types:
-  metabase:index:Networking:
+  metabase2:index:Networking:
     description: The options for networking.
     type: object
     properties:
@@ -21,7 +21,7 @@ types:
         type: array
         items:
           type: string
-  metabase:index:CustomDomain:
+  metabase2:index:CustomDomain:
     description: Options for setting a custom domain.
     type: object
     properties:
@@ -30,7 +30,7 @@ types:
       domainName:
         type: string
 resources:
-  metabase:index:Metabase:
+  metabase2:index:Metabase2:
     description: |
       This resources provisions a container running Metabase on AWS ECS Fargate. By default
       the resource will run the service in the AWS Account's Default VPC unless a VPC is defined. This
@@ -105,7 +105,7 @@ resources:
       runtime: yaml
       resources:
           metabaseService:
-              type: "metabase:index:Metabase"
+              type: "metabase2:index:Metabase"
       outputs:
           url: ${metabaseService.dnsName}
       ```
@@ -257,7 +257,7 @@ resources:
       runtime: yaml
       resources:
           metabaseService:
-              type: "metabase:index:Metabase"
+              type: "metabase2:index:Metabase"
               properties:
                   vpcId: "vpc-123"
                   networking:
@@ -279,10 +279,10 @@ resources:
         description: The VPC to use for the Metabase service. If left blank then the default VPC will be used.
       networking:
         description: Optionally provide specific subnet IDs to run the different resources of Metabase.
-        $ref: "#/types/metabase:index:Networking"
+        $ref: "#/types/metabase2:index:Networking"
       domain:
         description: Optionally provide a hosted zone and domain name for the Metabase service.
-        $ref: "#/types/metabase:index:CustomDomain"
+        $ref: "#/types/metabase2:index:CustomDomain"
       metabaseVersion:
         description: The version of Metabase to run - used as a tag on the `metabase/metabase` Dockerhub image.
         type: string

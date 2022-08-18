@@ -55,19 +55,19 @@ import * as utilities from "./utilities";
  * ```
  * {{ /example }}
  */
-export class Metabase extends pulumi.ComponentResource {
+export class Metabase2 extends pulumi.ComponentResource {
     /** @internal */
-    public static readonly __pulumiType = 'metabase:index:Metabase';
+    public static readonly __pulumiType = 'metabase2:index:Metabase2';
 
     /**
-     * Returns true if the given object is an instance of Metabase.  This is designed to work even
+     * Returns true if the given object is an instance of Metabase2.  This is designed to work even
      * when multiple copies of the Pulumi SDK have been loaded into the same process.
      */
-    public static isInstance(obj: any): obj is Metabase {
+    public static isInstance(obj: any): obj is Metabase2 {
         if (obj === undefined || obj === null) {
             return false;
         }
-        return obj['__pulumiType'] === Metabase.__pulumiType;
+        return obj['__pulumiType'] === Metabase2.__pulumiType;
     }
 
     /**
@@ -80,13 +80,13 @@ export class Metabase extends pulumi.ComponentResource {
     public /*out*/ readonly securityGroupId!: pulumi.Output<string>;
 
     /**
-     * Create a Metabase resource with the given unique name, arguments, and options.
+     * Create a Metabase2 resource with the given unique name, arguments, and options.
      *
      * @param name The _unique_ name of the resource.
      * @param args The arguments to use to populate this resource's properties.
      * @param opts A bag of options that control this resource's behavior.
      */
-    constructor(name: string, args?: MetabaseArgs, opts?: pulumi.ComponentResourceOptions) {
+    constructor(name: string, args?: Metabase2Args, opts?: pulumi.ComponentResourceOptions) {
         let resourceInputs: pulumi.Inputs = {};
         opts = opts || {};
         if (!opts.id) {
@@ -101,14 +101,14 @@ export class Metabase extends pulumi.ComponentResource {
             resourceInputs["securityGroupId"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-        super(Metabase.__pulumiType, name, resourceInputs, opts, true /*remote*/);
+        super(Metabase2.__pulumiType, name, resourceInputs, opts, true /*remote*/);
     }
 }
 
 /**
- * The set of arguments for constructing a Metabase resource.
+ * The set of arguments for constructing a Metabase2 resource.
  */
-export interface MetabaseArgs {
+export interface Metabase2Args {
     /**
      * Optionally provide a hosted zone and domain name for the Metabase service.
      */
